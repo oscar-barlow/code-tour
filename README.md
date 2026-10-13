@@ -36,22 +36,12 @@ If you'd rather keep the skill scoped to a single project instead of every
 session, clone it to `.claude/skills/code-tour/` inside that project's repo
 instead of your home directory.
 
-## Install goto-code alongside it
+## Requires goto-code
 
 code-tour turns every stop into a clickable link by calling the companion
-[goto-code](https://github.com/oscar-barlow/goto-code) skill — install that
-one too, or the tour has no way to open your editor:
-
-```bash
-git clone https://github.com/oscar-barlow/goto-code ~/.claude/skills/goto-code
-```
-
-goto-code is also where the editor choice lives: its `GOTO_CODE_EDITOR`
-environment variable (`vscode` by default, or `nvim`) decides which editor a
-stop opens in, and in Neovim mode its `GOTO_CODE_NVIM_SOCKET` points at your
-running instance. code-tour has no configuration of its own — it defers every
-link to goto-code, so set those variables once there and both skills follow
-them. See goto-code's README for the details.
+[goto-code](https://github.com/oscar-barlow/goto-code) skill, so install and
+configure that too — follow its own README. Without it the tour has no way to
+open your editor.
 
 ## How it works
 
