@@ -68,10 +68,8 @@ rationale. This file *is* the walkthrough — the user drives from it after the 
   one message is the most common mistake; they will pull you back to stop 1.
 - **Every reference goes through goto-code** so the link actually opens their editor. A bare path
   they have to find themselves defeats the purpose.
-- **Respect the current editor.** goto-code reads `GOTO_CODE_EDITOR` (vscode → `--markdown`
-  clickable links; nvim → jumps the live instance, `--list-only` for the others). The user switches
-  editors mid-session (often by reloading direnv) and will ask you to regenerate the links for the
-  new one — just re-run goto-code, never hand-roll or guess the link.
+- **Editors change mid-session.** The user may switch editors and ask you to regenerate the links
+  for the new one — just re-run goto-code, never hand-roll or guess the link.
 - **These are working sessions, not read-only tours.** Expect to make changes at a stop — that is
   the point. Parcel the changes into one or two commits and get the advisor's view before
   committing.
